@@ -31,7 +31,7 @@ const requireToken = passport.authenticate('bearer', { session: false })
 const router = express.Router()
 
 // INDEX
-// GET /items
+// GET /items -- get all items
 router.get('/items', requireToken, (req, res, next) => {
   Item.find()
     .then(items => {
